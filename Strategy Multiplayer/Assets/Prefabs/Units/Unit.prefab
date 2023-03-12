@@ -243,7 +243,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 7611357164292725867, guid: 93c95fe1b934dc248b19f7a843eeabea,
     type: 3}
   projectileSpawnPoint: {fileID: 7876604802017516156}
-  fireRange: 11
+  fireRange: 12
   fireRate: 1
   rotationSpeed: 180
 --- !u!114 &1305201262822991468

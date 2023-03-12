@@ -106,10 +106,5 @@ public class NM : NetworkManager
         Players.Clear();
     }
 
-    private void Update()
-    {
-        Debug.Log(Players.Count);
-    }
-
     #endregion
 }

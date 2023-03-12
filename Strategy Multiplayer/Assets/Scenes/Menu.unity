@@ -2985,11 +2985,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: NetworkManager
       objectReference: {fileID: 0}
-    - target: {fileID: 8735773556907196169, guid: 6ff3bd16f3b27294d83f72c7f85b9a5c,
-        type: 3}
-      propertyPath: maxConnections
-      value: 4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ff3bd16f3b27294d83f72c7f85b9a5c, type: 3}
 --- !u!1 &1377985849
