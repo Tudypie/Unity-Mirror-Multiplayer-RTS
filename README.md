@@ -1,6 +1,7 @@
 # Multiplayer-RTS-Project
 Multiplayer networking project in Unity using Mirror.
 This project uses FizzySteamworks so you can connect and play the game on steam.
+The unity version is 2021.3.20f1.
 
 1. Download the Game Build
 2. Add the executable as a "Non-Steam Game" in your steam library
