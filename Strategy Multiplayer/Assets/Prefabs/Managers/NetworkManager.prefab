@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8735773556907196169}
   - component: {fileID: 7128085898879492886}
   - component: {fileID: 1001336210}
+  - component: {fileID: 218364553}
   m_Layer: 0
   m_Name: NetworkManager
   m_TagString: Untagged
@@ -53,7 +54,7 @@ MonoBehaviour:
   sendRate: 30
   offlineScene: Assets/Scenes/Menu.unity
   onlineScene: 
-  transport: {fileID: 1001336210}
+  transport: {fileID: 218364553}
   networkAddress: localhost
   maxConnections: 4
   authenticator: {fileID: 0}
@@ -68,6 +69,7 @@ MonoBehaviour:
   - {fileID: 73150845600060665, guid: 78a9d894e85bac74bae3d1008e0b4eac, type: 3}
   - {fileID: 586921188784013542, guid: c8013b0723db91743a82a8640ac0a41a, type: 3}
   - {fileID: 586921188784013542, guid: 9c458a284d4046845afba4dfb5792dfa, type: 3}
+  - {fileID: 137845634237026379, guid: 98fabc859d43ceb43829cb98f5b4f672, type: 3}
   timeInterpolationGui: 0
   unitBasePrefab: {fileID: 586921188784013542, guid: 136801a830e9a0444b56abeb45441241,
     type: 3}
@@ -101,3 +103,30 @@ MonoBehaviour:
   Timeout: 25
   AllowSteamRelay: 1
   UseNextGenSteamNetworking: 1
+--- !u!114 &218364553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8735773556907196168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b0fecffa3f624585964b0d0eb21b18e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Port: 7777
+  DualMode: 1
+  NoDelay: 1
+  Interval: 10
+  Timeout: 10000
+  FastResend: 2
+  SendWindowSize: 4096
+  ReceiveWindowSize: 4096
+  MaxRetransmit: 40
+  MaximizeSocketBuffers: 1
+  ReliableMaxMessageSize: 298449
+  UnreliableMaxMessageSize: 1199
+  debugLog: 0
+  statisticsGUI: 0
+  statisticsLog: 0
