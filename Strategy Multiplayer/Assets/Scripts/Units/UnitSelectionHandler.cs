@@ -18,27 +18,37 @@ public class UnitSelectionHandler : MonoBehaviour
 
     private Player player;
     private Camera mainCamera;
+    
+    private bool canSelect = true;
 
     private void Start()
     {
         mainCamera = Camera.main;
+        player = NetworkClient.connection.identity.GetComponent<Player>();
 
         Unit.AuthorityOnUnitDespawned += AuthorityHandleUnitDespawn;
         GameOverHandler.ClientOnGameOver += ClientHandleGameOver;
+
+        BuildingButton.EnableSelectionArea += EnableSelectionArea;
+        BuildingButton.DisableSelectionArea += DisableSelectionArea;
+        Minimap.EnableSelectionArea += EnableSelectionArea;
+        Minimap.DisableSelectionArea += DisableSelectionArea;
     }
 
     private void OnDestroy()
     {
         Unit.AuthorityOnUnitDespawned -= AuthorityHandleUnitDespawn;
         GameOverHandler.ClientOnGameOver -= ClientHandleGameOver;
+
+        BuildingButton.EnableSelectionArea -= EnableSelectionArea;
+        BuildingButton.DisableSelectionArea -= DisableSelectionArea;
+        Minimap.EnableSelectionArea -= EnableSelectionArea;
+        Minimap.DisableSelectionArea -= DisableSelectionArea;
     }   
 
     private void Update()
     {   
-        if(player == null){
-            player = NetworkClient.connection.identity.GetComponent<Player>();
-        }
-            
+        if(!canSelect) return;
 
         if(Mouse.current.leftButton.wasPressedThisFrame)
         {
@@ -138,6 +148,16 @@ public class UnitSelectionHandler : MonoBehaviour
     private void ClientHandleGameOver(string winnerName)
     {
         enabled = false;
+    }
+
+    private void EnableSelectionArea()
+    {
+        canSelect = true;
+    }
+
+    private void DisableSelectionArea()
+    {
+        canSelect = false;
     }
 
 }

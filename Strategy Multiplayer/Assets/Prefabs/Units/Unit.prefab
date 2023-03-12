@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 6486526481954435217}
   - component: {fileID: 1305201262822991468}
   - component: {fileID: 3747998121334354957}
+  - component: {fileID: 4700574922151309193}
   m_Layer: 11
   m_Name: Unit
   m_TagString: Untagged
@@ -35,7 +36,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2381084978333035756}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.018512, y: 0.58744, z: 0.21602}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8274989311136642263}
@@ -160,6 +161,7 @@ MonoBehaviour:
   syncDirection: 0
   syncMode: 0
   syncInterval: 0.1
+  resourceCost: 10
   health: {fileID: 1305201262822991468}
   unitMovement: {fileID: 7744228217762014246}
   targetor: {fileID: 4290558047424710985}
@@ -275,6 +277,23 @@ MonoBehaviour:
   health: {fileID: 1305201262822991468}
   healthBarParent: {fileID: 6065325336556853230}
   healthBarImage: {fileID: 6065325337371341866}
+--- !u!114 &4700574922151309193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2381084978333035756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9da49bed029b7b946b628d114bfad182, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0.1
+  colorRenderers:
+  - {fileID: 7290691916298924861}
 --- !u!1 &3368201401681612051
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,7 +304,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8274989311136642263}
   - component: {fileID: 6240986518935774201}
-  m_Layer: 11
+  m_Layer: 14
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -671,6 +690,12 @@ PrefabInstance:
 --- !u!4 &8459608890916522066 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 62f3bd46b12aab548abc3c86e2a2dd94,
+    type: 3}
+  m_PrefabInstance: {fileID: 8281037839843307449}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &7290691916298924861 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 62f3bd46b12aab548abc3c86e2a2dd94,
     type: 3}
   m_PrefabInstance: {fileID: 8281037839843307449}
   m_PrefabAsset: {fileID: 0}

@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 4264260964547888518}
   - component: {fileID: 4264260964547888517}
   - component: {fileID: 4264260964547888516}
-  - component: {fileID: 4264260964547888515}
+  - component: {fileID: 5623353593707424438}
   - component: {fileID: 5672667282397601642}
   m_Layer: 0
   m_Name: HealthBarCanvas
@@ -158,7 +158,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &4264260964547888515
+--- !u!114 &5623353593707424438
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

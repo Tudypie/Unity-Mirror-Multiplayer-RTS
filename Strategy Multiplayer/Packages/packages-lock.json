@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.rlabrecque.steamworks.net": {
+      "version": "https://github.com/rlabrecque/Steamworks.NET.git?path=/com.rlabrecque.steamworks.net#20.0.0",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "3f69b5e58e7cf465b70b6fbe3de18105db828a4e"
+    },
     "com.unity.cinemachine": {
       "version": "2.6.17",
       "depth": 0,

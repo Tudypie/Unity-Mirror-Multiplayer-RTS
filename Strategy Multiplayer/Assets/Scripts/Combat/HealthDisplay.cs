@@ -9,6 +9,8 @@ public class HealthDisplay : MonoBehaviour
     [SerializeField] private GameObject healthBarParent = null;
     [SerializeField] private Image healthBarImage = null;
 
+    private bool mouseOver = false;
+
     private void Awake()
     {
         health.ClientOnHealthUpdated += HandleHealthUpdated;
@@ -19,14 +21,25 @@ public class HealthDisplay : MonoBehaviour
         health.ClientOnHealthUpdated -= HandleHealthUpdated;
     }
 
-    private void OnMouseEnter()
+    private void Update()
     {
+        if(!mouseOver)
+        {
+            healthBarParent.SetActive(false);
+            return;
+        } 
+
         healthBarParent.SetActive(true);
+    }
+
+    private void OnMouseOver()
+    {
+        mouseOver = true;
     }
 
     private void OnMouseExit()
     {
-        healthBarParent.SetActive(false);
+        mouseOver = false;
     }
 
     private void HandleHealthUpdated(int currentHealth, int maxHealth)

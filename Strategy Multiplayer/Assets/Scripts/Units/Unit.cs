@@ -7,6 +7,7 @@ using Mirror;
 
 public class Unit : NetworkBehaviour
 {   
+    [SerializeField] private int resourceCost = 10;
     [SerializeField] private Health health;
     [SerializeField] private UnitMovement unitMovement = null;
     [SerializeField] private Targetor targetor = null;
@@ -19,6 +20,11 @@ public class Unit : NetworkBehaviour
     public static event Action<Unit> AuthorityOnUnitSpawned;
     public static event Action<Unit> AuthorityOnUnitDespawned;
 
+    public int GetResourceCost()
+    {
+        return resourceCost;
+    }
+    
     public UnitMovement GetUnitMovement()
     {
         return unitMovement;
